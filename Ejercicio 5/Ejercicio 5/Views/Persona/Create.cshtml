@@ -28,11 +28,12 @@
                 <span asp-validation-for="Apellido" class="text-danger"></span>
             </div>
             <div class="form-group">
-
-                <input asp-for="Estado" value="Activo" hidden>
+                <label asp-for="Estado" class="control-label"></label>
+                <input asp-for="Estado" class="form-control" />
                 <span asp-validation-for="Estado" class="text-danger"></span>
-            </div>
 
+            </div>
+            
 
             <div class="form-group">
                 <label asp-for="Carrera" class="control-label"></label>
