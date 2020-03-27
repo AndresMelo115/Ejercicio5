@@ -25,19 +25,22 @@
             </div>
             <div class="form-group">
                 <label asp-for="Estado" class="control-label"></label>
-                <input asp-for="Estado" class="form-control" />
-                <span asp-validation-for="Estado" class="text-danger"></span>
+                <select asp-for="Estado" class="form-control">
+                    <option label="Activo">  True</option>
+                    <option label="Inactivo"> False</option>
+                </select>
             </div>
-            <div class="form-group">
-                <label asp-for="Carrera" class="control-label"></label>
-                <input asp-for="Carrera" class="form-control" />
-                <span asp-validation-for="Carrera" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Guardar" class="btn btn-primary" />
-            </div>
-        </form>
     </div>
+    <div class="form-group">
+        <label asp-for="Carrera" class="control-label"></label>
+        <input asp-for="Carrera" class="form-control" />
+        <span asp-validation-for="Carrera" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Guardar" class="btn btn-primary" />
+    </div>
+    </form>
+</div>
 </div>
 
 <div>
