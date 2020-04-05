@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Pokedex.Models.Pokemon>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Move1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Move2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Move3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Move4)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Foto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RegionNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo1Navigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo2Navigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Move1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Move2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Move3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Move4)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Foto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RegionNavigation.NombreR)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo1Navigation.NombreT)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo2Navigation.NombreT)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PokeId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PokeId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PokeId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
